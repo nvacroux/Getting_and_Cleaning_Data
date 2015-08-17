@@ -50,7 +50,7 @@ combined <- rbind(test_temp, train_temp)
 
 # Determine which columns to keep, and create a "filtered" data set that contains only the specified columns.
 match_cases <- c("mean", "std", "activity")
-filtered <- combined[,grep(paste(match_cases, collapse = "|"), colnames(combined))]
+filtered <- combined[,intersect(grep(paste(match_cases, collapse = "|"), colnames(combined)), grep("Freq", colnames(combined), invert = TRUE))]
 
 # This is a very simple method to replace known index values for activity with descriptive names.  Yes, I realize that
 # there are more elegant ways to do this but this is so clear I could not resist it.

@@ -35,8 +35,10 @@ colnames(train_temp)[1] <- "activity"
 combined <- rbind(test_temp, train_temp)
 
 # Determine which columns to keep, and create a "filtered" data set that contains only the specified columns.
-match_cases <- c("mean", "std", "activity")
-filtered <- combined[,grep(paste(match_cases, collapse = "|"), colnames(combined))]
+# Due to the meanFreq() values not being filtered by the first grep, a second one was added to specifically
+# exclued those columns.
+match_cases <- c("mean()", "std()", "activity")
+filtered <- combined[,intersect(grep(paste(match_cases, collapse = "|"), colnames(combined)), grep("Freq", colnames(combined), invert = TRUE))]
 
 # This is a very simple method to replace known index values for activity with descriptive names.  Yes, I realize that
 # there are more elegant ways to do this but this is so clear I could not resist it.
@@ -50,4 +52,5 @@ filtered$activity[filtered$activity == 1] <- "walking"
 # This aggregates all the rows in the filtered table by activity and calculates a mean for each activity in each column.
 # It subsequently creates a txt file with the activity_means table.
 activity_means <- aggregate(filtered[,-1], by = list(filtered[,1]), FUN = mean)
+colnames(activity_means)[1] <- "activity"
 write.table(activity_means, file = "activity_means.txt", row.name=FALSE)
