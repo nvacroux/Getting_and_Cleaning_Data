@@ -1,6 +1,7 @@
 # Getting_and_Cleaning_Data
 
 This repo contains files associated with the Johns Hopkins Getting and Cleaning Data class offered through Coursera.
+Author: Nicolas Vacroux
 
 Filename:  Readme.md
 This file.
