@@ -27,7 +27,7 @@ The tidy dataset is a subset of the original dataset which contains only an aver
     - standing
     - laying [down]
 
-### Faatures:
+### Features:
     Excerpt reproduced from the features_info.txt provided in the raw data zip file:
 	- tBodyAcc-XYZ
 	- tGravityAcc-XYZ
@@ -52,5 +52,6 @@ The tidy dataset is a subset of the original dataset which contains only an aver
 	mean(): Mean value
 	std(): Standard deviation
 	
+### Units of Measurement:
 	Acceleration signals (from accelerometer) measured in meters per second squared.
 	Angular velocity (from gyroscope) measured in radians per second.
