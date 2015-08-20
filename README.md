@@ -2,10 +2,10 @@
 
 This repo contains files associated with the Johns Hopkins Getting and Cleaning Data class offered through Coursera.
 
-Filename:  Readme.md
+## Filename:  Readme.md
 This file.
 
-Filename:  run_analysis.R
+## Filename:  run_analysis.R
 This is the file that satisfies the requirements of the course project.  Operating on the assumption that the required data files are in the working directory, it performs the following operations:
 1.  Read the test data file and activity id file into dataframes.  (Activity ids are effectively row names.)
 2.  Read the train data file and activity id file into dataframes.  (Activity ids are effectively row names.)
@@ -21,13 +21,13 @@ This is the file that satisfies the requirements of the course project.  Operati
 12. Aggregate the various activities in the filtered dataset so that all data for each activity is colocated.
 13. Write a text file of the final aggregated means and standard deviation dataframe.
 
-Filename:  run_analysis-full_download_code.R
+## Filename:  run_analysis-full_download_code.R
 This file performs all the activities of activity_mean.R but includes code to download and unzip the raw data file.
 This code will unzip the data file into a subdirectory of the working directory and contains all the required code to move from directory to directory to find the information it is looking for.
 
-Filename:  activity_means.txt
+## Filename:  activity_means.txt
 This is the file that results from running run_analysis.R.  It contains the mean of the means and the mean of the standard deviations for every feature by activity.
 This is a duplicate of the file uploaded to Coursera as part of this assignment.
 
-Filename:  run_analysis_codebook.txt
+## Filename:  run_analysis_codebook.txt
 This is the codebook associated with this course project.
